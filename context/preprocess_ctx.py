@@ -9,7 +9,7 @@ def process_stream_c(
     input_file="final_hybrid_recommender_dataset.jsonl",
     mapping_file="cf_item_mapping.json",
 ):
-    print("🚀 Initializing Stream C (Context & RIS) Preprocessing...")
+    print(" Initializing Stream C (Context & RIS) Preprocessing...")
     start_time = time.time()
 
     print(f"   -> Loading dataset from {input_file}...")
@@ -91,7 +91,7 @@ def process_stream_c(
     session_sequences.to_json(seq_output_file, orient="records", lines=True)
 
     elapsed = round((time.time() - start_time), 2)
-    print(f"🎯 Stream C complete in {elapsed} seconds!")
+    print(f"Stream C complete in {elapsed} seconds!")
     print(f"   Output files: {output_file}, {seq_output_file}")
 
 
