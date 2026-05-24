@@ -6,7 +6,7 @@ import time
 
 
 def process_stream_a(input_file="final_hybrid_recommender_dataset.jsonl"):
-    print("🚀 Initializing Stream A (Collaborative Filtering) Preprocessing...")
+    print("Initializing Stream A (Collaborative Filtering) Preprocessing...")
     start_time = time.time()
 
     print(f"   -> Loading data from {input_file}...")
@@ -58,7 +58,7 @@ def process_stream_a(input_file="final_hybrid_recommender_dataset.jsonl"):
         json.dump(item_mapping, f)
 
     elapsed = round((time.time() - start_time), 2)
-    print(f"🎯 Stream A complete in {elapsed} seconds!")
+    print(f" Stream A complete in {elapsed} seconds!")
     print(
         "   Output files: cf_interaction_matrix.npz, cf_user_mapping.json, cf_item_mapping.json"
     )
