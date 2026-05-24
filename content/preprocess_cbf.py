@@ -11,7 +11,7 @@ def process_stream_b(
     input_file="final_hybrid_recommender_dataset.jsonl",
     mapping_file="cf_item_mapping.json",
 ):
-    print("🚀 Initializing Stream B (Content-Based) Preprocessing...")
+    print(" Initializing Stream B (Content-Based) Preprocessing...")
     start_time = time.time()
 
     print(f"   -> Loading item index mapping from {mapping_file}...")
@@ -44,7 +44,7 @@ def process_stream_b(
         safe_join
     )
 
-    # Combine everything into one rich contextual string
+   
     df_unique_items["full_text"] = (
         df_unique_items["title_meta"]
         + " . "
@@ -81,7 +81,7 @@ def process_stream_b(
     np.save(output_file, item_embeddings)
 
     elapsed = round((time.time() - start_time) / 60, 2)
-    print(f"🎯 Stream B complete in {elapsed} minutes!")
+    print(f"Stream B complete in {elapsed} minutes!")
     print(
         f"   Output shape: {item_embeddings.shape} (Ready for PyTorch nn.Embedding.from_pretrained)"
     )
